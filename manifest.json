@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Momentum Clone Extension",
+    "version": "0.0.1",
+  
+    "default_locale": "en",
+    "description": "A plain text description",
+    "chrome_url_overrides": {
+        "newTab": "index.html"
+    }
+
+}

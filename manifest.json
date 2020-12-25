@@ -6,7 +6,7 @@
     "default_locale": "en",
     "description": "A plain text description",
     "chrome_url_overrides": {
-        "newTab": "index.html"
+        "newtab": "index.html"
     }
 
 }

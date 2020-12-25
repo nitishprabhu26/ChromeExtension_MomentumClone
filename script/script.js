@@ -6,5 +6,21 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById("image").setAttribute(
         "src",
         `./images/${image}`
-    )
+    );
+
+    var focusInput = document.getElementById("focus")
+    // chrome storage api
+    // sync storage- syncs it across all browser tabs
+    chrome.storage.sync.get(["focus"], function(result){
+        // 1st time it wont get executed
+        if(result.focus){
+            focusInput.value = result.focus
+        }
+    });
+
+    focusInput.addEventListener('keypress', function(e){
+        chrome.storage.sync.set({focus: e.target.value});
+    });
+
 }, false);
+
